@@ -1,0 +1,105 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://example.com/object1601744583.json",
+    "title": "Root",
+    "type": "object",
+    "required": [
+        "questionsList"
+    ],
+    "properties": {
+        "questionsList": {
+            "$id": "#root/questionsList",
+            "title": "Questionslist",
+            "type": "array",
+            "default": [],
+            "items": {
+                "$id": "#root/questionsList/items",
+                "title": "Items",
+                "type": "object",
+                "required": [
+                    "category",
+                    "questions"
+                ],
+                "properties": {
+                    "category": {
+                        "$id": "#root/questionsList/items/category",
+                        "title": "Category",
+                        "type": "string",
+                        "default": "",
+                        "examples": [
+                            "History of Morehouse"
+                        ],
+                        "pattern": "^.*$"
+                    },
+                    "questions": {
+                        "$id": "#root/questionsList/items/questions",
+                        "title": "Questions",
+                        "type": "array",
+                        "default": [],
+                        "items": {
+                            "$id": "#root/questionsList/items/questions/items",
+                            "title": "Items",
+                            "type": "object",
+                            "required": [
+                                "question",
+                                "options",
+                                "answer",
+                                "worth"
+                            ],
+                            "properties": {
+                                "question": {
+                                    "$id": "#root/questionsList/items/questions/items/question",
+                                    "title": "Question",
+                                    "type": "string",
+                                    "default": "",
+                                    "examples": [
+                                        "The qusetion"
+                                    ],
+                                    "pattern": "^.*$"
+                                },
+                                "options": {
+                                    "$id": "#root/questionsList/items/questions/items/options",
+                                    "title": "Options",
+                                    "type": "array",
+                                    "default": [],
+                                    "items": {
+                                        "$id": "#root/questionsList/items/questions/items/options/items",
+                                        "title": "Items",
+                                        "type": "string",
+                                        "default": "",
+                                        "examples": [
+                                            "1"
+                                        ],
+                                        "pattern": "^.*$"
+                                    }
+                                },
+                                "answer": {
+                                    "$id": "#root/questionsList/items/questions/items/answer",
+                                    "title": "Answer",
+                                    "type": "string",
+                                    "default": "",
+                                    "examples": [
+                                        "Answer"
+                                    ],
+                                    "pattern": "^.*$"
+                                },
+                                "worth": {
+                                    "$id": "#root/questionsList/items/questions/items/worth",
+                                    "title": "Worth",
+                                    "type": "integer",
+                                    "examples": [
+                                        2
+                                    ],
+                                    "default": 0
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}
