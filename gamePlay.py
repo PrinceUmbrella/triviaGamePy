@@ -10,4 +10,4 @@ questionInput = json.load(open("questionsInput.json"),
 
 questionObj = Question(
     questionInput.questionsList[0].questions[0], questionInput.questionsList[0].category)
-print(questionObj)
+print(questionObj.getQuestionProperties())

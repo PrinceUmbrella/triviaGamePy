@@ -6,6 +6,7 @@ class Question:
         self.setAnswer()
         self.setPoints()
         self.setOptions()
+        self.seen = False
 
     def __str__(self):
         return self.question
@@ -36,3 +37,6 @@ class Question:
 
     def getPoints(self):
         return self.points
+
+    def isSelected(self):
+        return self.seen
