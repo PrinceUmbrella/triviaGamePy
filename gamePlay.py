@@ -17,7 +17,12 @@ def gamePlay():
     random.shuffle(questionList)
     numberOfPlayers = int(input("Please Enter the number of players: "))
 
+    playerList = getPlayersInfo(numberOfPlayers)
+
+
+def getPlayersInfo(numberOfPlayers):
     playerNames = []
+    playerList = []
     for i in range(numberOfPlayers):
         name = input(f"Please Enter the name for Player {i + 1}: ")
         while (name in playerNames):
@@ -26,6 +31,7 @@ def gamePlay():
         playerList.append(Player(name, i))
         playerNames.append(name)
         print("\n")
+    return playerList
 
 
 def unpackQuestion(categoryPack):
