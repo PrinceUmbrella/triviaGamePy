@@ -2,7 +2,7 @@
     "questionsList": [{
             "category": "History of Morehouse",
             "questions": [{
-                    "question": "The qusetion",
+                    "question": "The qusetion is very good",
                     "options": ["1", "2", "3", "Answer"],
                     "answer": "Answer",
                     "worth": 2
