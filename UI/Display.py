@@ -18,13 +18,13 @@ def Game(prompt, options):
     return options[v.get()]
 
 
-result = Game(
-    "What is your favorite color?",
-    [
-        "Blue!",
-        "No -- Yellow!",
-        "Aaaaargh!"
-    ]
-)
+# result = Game(
+#     "What is your favorite color?",
+#     [
+#         "Blue!",
+#         "No -- Yellow!",
+#         "Aaaaargh!"
+#     ]
+# )
 
-print("User's response was: {}".format(repr(result)))
+# print("User's response was: {}".format(repr(result)))
