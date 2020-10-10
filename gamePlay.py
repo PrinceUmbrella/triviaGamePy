@@ -19,6 +19,17 @@ def gamePlay():
 
     playerList = getPlayersInfo(numberOfPlayers)
 
+    count = 0
+    totalQuestion = 0
+    while (totalQuestion < len(questionList)):
+        currentPlayerName = playerList[count % numberOfPlayers].getPlayer()
+        currentPlayerScore = playerList[count % numberOfPlayers].getScore()
+        question = questionList.pop(0)
+        print(f"{currentPlayerName} Turn: Current Score {currentPlayerScore}")
+        question.printQuestion()
+        totalQuestion += 1
+        count += 1
+
 
 def getPlayersInfo(numberOfPlayers):
     playerNames = []
@@ -42,3 +53,6 @@ def unpackQuestion(categoryPack):
 
 
 gamePlay()
+# k = [1, 2, 4, 7, 14, 28]
+# for i in k:
+#     print(f"{i}", 3**i % 58)

@@ -40,3 +40,10 @@ class Question:
 
     def isSelected(self):
         return self.seen
+
+    def printQuestion(self):
+        print(self.question)
+        counter = 0
+        for ans in self.answer:
+            print(f"{counter + 1}: {ans}")
+            counter += 1
