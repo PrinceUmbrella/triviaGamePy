@@ -47,6 +47,12 @@ def gamePlay():
             print(PrettyTable(
                 [f"Incorrect Answer!  Your current score is still {currentPlayerScore}"]))
         totalQuestion += 1
+    resultCard = PrettyTable(["Score Board"])
+    resultCard.add_row(
+        [f"Player: {playerList[0].getPlayer()} Score: {playerList[0].getScore()}"])
+    resultCard.add_row(
+        [f"Player: {playerList[1].getPlayer()} Score: {playerList[1].getScore()}"])
+    print(resultCard)
 
 
 def getPlayersInfo(numberOfPlayers):
