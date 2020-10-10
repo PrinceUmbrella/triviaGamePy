@@ -21,6 +21,7 @@ def gamePlay():
 
     playerList = getPlayersInfo(numberOfPlayers)
 
+    print(PrettyTable(["Let's Start The Game"]))
     countt = 0
     totalQuestion = 0
     startLen = len(questionList)
@@ -58,7 +59,6 @@ def getPlayersInfo(numberOfPlayers):
                 f"Name already exsits, Please Enter the name for Player {i + 1}: ")
         playerList.append(Player(name, i))
         playerNames.append(name)
-        print("\n")
     return playerList
 
 
