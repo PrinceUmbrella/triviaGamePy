@@ -1,8 +1,10 @@
 from gameClasses.Question import Question
 from gameClasses.Player import Player
 from types import SimpleNamespace
+from prettytable import PrettyTable
 import json
 import random
+
 
 # Parse JSON into an object with attributes corresponding to dict keys.
 questionInput = json.load(open("questionsInput.json"),
@@ -22,7 +24,7 @@ def gamePlay():
     countt = 0
     totalQuestion = 0
     startLen = len(questionList)
-    # print(len(questionList), len(playerList))
+
     while (totalQuestion < startLen):
         currentPlayerName = playerList[totalQuestion %
                                        numberOfPlayers].getPlayer()
@@ -38,10 +40,11 @@ def gamePlay():
         if (options[int(answer)-1] == question.getAnswer()):
             playerList[totalQuestion %
                        numberOfPlayers].setScore(question.getPoints())
-            print(
-                f"Correct Answer ! Your current score is {currentPlayerScore + question.getPoints()}")
+            print(PrettyTable(
+                [f"Correct Answer! Your current score is {currentPlayerScore + question.getPoints()}"]))
         else:
-            print("Incorrect Answer")
+            print(PrettyTable(
+                [f"Incorrect Answer!  Your current score is still {currentPlayerScore}"]))
         totalQuestion += 1
 
 
@@ -67,6 +70,3 @@ def unpackQuestion(categoryPack):
 
 
 gamePlay()
-# k = [1, 2, 4, 7, 14, 28]
-# for i in k:
-#     print(f"{i}", 3**i % 58)
