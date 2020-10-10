@@ -28,7 +28,7 @@ def gamePlay():
 
     while (totalQuestion < 10):
         currentPlayerName = playerList[totalQuestion %
-                                       numberOfPlayers].getPlayer()
+                                       numberOfPlayers].getName()
         currentPlayerScore = playerList[totalQuestion %
                                         numberOfPlayers].getScore()
         question = questionList.pop(0)
@@ -46,13 +46,13 @@ def gamePlay():
         else:
             print(PrettyTable(
                 [f"Incorrect Answer!  Your current score is still {currentPlayerScore}"]))
+        print("\n")
         totalQuestion += 1
-    resultCard = PrettyTable(["Score Board"])
-    resultCard.add_row(
-        [f"Player: {playerList[0].getPlayer()} Score: {playerList[0].getScore()}"])
-    resultCard.add_row(
-        [f"Player: {playerList[1].getPlayer()} Score: {playerList[1].getScore()}"])
-    print(resultCard)
+    finalScoreTable = PrettyTable(["Name", "Score"])
+    for i in playerList:
+        finalScoreTable.add_row([i.getName(), i.getScore()])
+    print("\n")
+    print(finalScoreTable)
 
 
 def getPlayersInfo(numberOfPlayers):
@@ -63,7 +63,7 @@ def getPlayersInfo(numberOfPlayers):
         while (name in playerNames):
             name = input(
                 f"Name already exsits, Please Enter the name for Player {i + 1}: ")
-        playerList.append(Player(name, i))
+        playerList.append(Player(name))
         playerNames.append(name)
     return playerList
 
