@@ -8,7 +8,7 @@
                     "worth": 2
                 },
                 {
-                    "question": "The qusetion",
+                    "question": "The question",
                     "options": ["a", "b", "c", "Answer"],
                     "answer": "Answer",
                     "worth": 2
@@ -25,7 +25,7 @@
                     "worth": 2
                 },
                 {
-                    "question": "The qusetion",
+                    "question": "The question",
                     "options": ["1", "2", "3", "Answer"],
                     "answer": "Answer",
                     "worth": 2
