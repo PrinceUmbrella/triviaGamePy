@@ -1,4 +1,5 @@
 from prettytable import PrettyTable
+import random
 
 
 class Question:
@@ -15,8 +16,8 @@ class Question:
         return self.question
 
     def setOptions(self):
+        random.shuffle(self.questionJson.options)
         self.options = self.questionJson.options
-
     def getOptions(self):
         return self.options
 
