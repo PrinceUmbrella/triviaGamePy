@@ -2,7 +2,7 @@
     "questionsList": [{
             "category": "History of Morehouse",
             "questions": [{
-                    "question": "The qusetion is very good",
+                    "question": "The question is very good",
                     "options": ["1", "2", "3", "Answer"],
                     "answer": "Answer",
                     "worth": 2
@@ -19,7 +19,7 @@
         {
             "category": "History of Spelman",
             "questions": [{
-                    "question": "The qusetion",
+                    "question": "The question",
                     "options": ["1", "2", "3", "Answer"],
                     "answer": "Answer",
                     "worth": 2
