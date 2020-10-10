@@ -18,6 +18,7 @@ class Question:
     def setOptions(self):
         random.shuffle(self.questionJson.options)
         self.options = self.questionJson.options
+
     def getOptions(self):
         return self.options
 
@@ -46,12 +47,12 @@ class Question:
         return self.seen
 
     def printQuestion(self):
-        printFormatter = PrettyTable([self.question])
+        questionCard = PrettyTable([self.question])
 
         counter = 0
         for opt in self.options:
-            printFormatter.add_row([f"{counter + 1}: {opt}"])
+            questionCard.add_row([f"{counter + 1}: {opt}"])
             counter += 1
         scoreCard = PrettyTable([f"For {self.points} points: "])
-        print(printFormatter)
+        print(questionCard)
         print(scoreCard)
