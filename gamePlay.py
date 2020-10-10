@@ -12,8 +12,8 @@ questionInput = json.load(open("questionsInput.json"),
 def gamePlay():
     questionList = []
     playerList = []
-    for elements in questionInput.questionsList:
-        questionList += unpackQuestion(elements)
+    for category in questionInput.questionsList:
+        questionList += unpackQuestion(category)
     random.shuffle(questionList)
     numberOfPlayers = int(input("Please Enter the number of players: "))
 
@@ -23,16 +23,26 @@ def gamePlay():
     totalQuestion = 0
     startLen = len(questionList)
     # print(len(questionList), len(playerList))
-
     while (totalQuestion < startLen):
-        currentPlayerName = playerList[countt % numberOfPlayers].getPlayer()
-        currentPlayerScore = playerList[countt % numberOfPlayers].getScore()
+        currentPlayerName = playerList[totalQuestion %
+                                       numberOfPlayers].getPlayer()
+        currentPlayerScore = playerList[totalQuestion %
+                                        numberOfPlayers].getScore()
         question = questionList.pop(0)
+        options = question.getOptions()
         print(f"{currentPlayerName} Turn: Current Score {currentPlayerScore}")
-        question.printQuestion()
 
+        question.printQuestion()
+        answer = input("Select your answer: ")
+
+        if (options[int(answer)-1] == question.getAnswer()):
+            playerList[totalQuestion %
+                       numberOfPlayers].setScore(question.getPoints())
+            print(
+                f"Correct Answer ! Your current score is {currentPlayerScore + question.getPoints()}")
+        else:
+            print("Incorrect Answer")
         totalQuestion += 1
-        countt += 1
 
 
 def getPlayersInfo(numberOfPlayers):
