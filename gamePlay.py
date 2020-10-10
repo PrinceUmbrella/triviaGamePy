@@ -17,16 +17,16 @@ def gamePlay():
     for category in questionInput.questionsList:
         questionList += unpackQuestion(category)
     random.shuffle(questionList)
-    numberOfPlayers = int(input("Please Enter the number of players: "))
+    # numberOfPlayers = int(input("Please Enter the number of players: "))
+    numberOfPlayers = 2
 
     playerList = getPlayersInfo(numberOfPlayers)
 
     print(PrettyTable(["Let's Start The Game"]))
     countt = 0
     totalQuestion = 0
-    startLen = len(questionList)
 
-    while (totalQuestion < startLen):
+    while (totalQuestion < 10):
         currentPlayerName = playerList[totalQuestion %
                                        numberOfPlayers].getPlayer()
         currentPlayerScore = playerList[totalQuestion %
