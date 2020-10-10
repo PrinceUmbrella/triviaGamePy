@@ -44,6 +44,6 @@ class Question:
     def printQuestion(self):
         print(self.question)
         counter = 0
-        for ans in self.answer:
-            print(f"{counter + 1}: {ans}")
+        for opt in self.options:
+            print(f"{counter + 1}: {opt}")
             counter += 1
