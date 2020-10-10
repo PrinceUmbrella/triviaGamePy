@@ -44,8 +44,11 @@ def gamePlay():
             print(PrettyTable(
                 [f"Correct Answer! Your current score is {currentPlayerScore + question.getPoints()}"]))
         else:
-            print(PrettyTable(
-                [f"Incorrect Answer!  Your current score is still {currentPlayerScore}"]))
+            incorrectTable = PrettyTable(
+                [f"Incorrect Answer! The answer is {question.getAnswer()}"])
+            incorrectTable.add_row(
+                [f"Your current score is still {currentPlayerScore}"])
+            print(incorrectTable)
         print("\n")
         totalQuestion += 1
     finalScoreTable = PrettyTable(["Name", "Score"])
