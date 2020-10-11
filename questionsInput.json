@@ -145,6 +145,50 @@
                     "options": ["Spider","Wild dog", "Monkey", "Crocodile"],
                     "answer": "Spider",
                     "worth": 3
+                },
+                {
+                    "question": "Who is the Egyptian god of reproduction and lettuce?",
+                    "options": [
+                        "Menu",
+                        "Mut",
+                        "Meret",
+                        "Min"
+                        ],
+                    "answer": "Min",
+                    "worth": 2
+                },
+                {
+                    "question": "Who is a minor god that is protector and creator of various arts, such as cheese making and bee keeping.",
+                    "options": [
+                        "Autonoe",
+                        "Carme",
+                        "Aristaeus",
+                        "Cephisso"
+                        ],
+                    "answer": "Aristaeus",
+                    "worth": 3
+                },
+                {
+                    "question": "Hera is god of...",
+                    "options": [
+                        "Agriculture",
+                        "Sea",
+                        "War",
+                        "Marriage"
+                        ],
+                    "answer": "Marriage",
+                    "worth": 2
+                },
+                {
+                    "question": "A minotaur is half human half what?",
+                    "options": [
+                        "Cow",
+                        "Horse",
+                        "Eagle",
+                        "Bull"
+                        ],
+                    "answer": "Bull",
+                    "worth": 1
                 }
             ]
 
@@ -184,6 +228,132 @@
                 }
             ]
 
+        },
+        {
+            "category": "Geography",
+            "questions": [
+                {
+                    "question":"What is the largest non-continental island in the world?",
+                    "options": ["New Guinea","Borneo", "Madagascar","Greenland"],
+                    "answer": "Greenland",
+                    "worth": 3
+                },
+                {
+                    "question": "Which is the world's longest river?",
+                    "options": [
+                        "Missouri",
+                        "Amazon",
+                        "Nile",
+                        "Yangtze"
+                        ],
+                    "answer": "Nile",
+                    "worth": 1
+                },
+                {
+                    "question": "Which is not a country in Africa?",
+                    "options":[
+                        "Senegal",
+                        "Liberia",
+                        "Somalia",
+                        "Guyana"
+                        ],
+                    "answer": "Guyana",
+                    "worth": 3
+                },
+                {
+                    "question": "What year is on the flag of the US state Wisconsin?",
+                    "options": [
+                        "1634",
+                        "1783",
+                        "1901",
+                        "1848"
+                        ],
+                    "answer": "1848",
+                    "worth": 4
+                },
+                {
+                    "question": "What is the capital of Mauritius?",
+                    "options":  [
+                        "Port Moresby",
+                        "Port Vila",
+                        "Port-au-Prince",
+                        "Port Louis"
+                        ],
+                    "answer": "Port Louis",
+                    "worth": 2
+                },
+                {
+                    "question": "What is the capital city of Mongolia",
+                    "options":  [
+                        "Ulaanbaatar",
+                        "Tashkent",
+                        "Bishkek",
+                        "Kabul"
+                        ],
+                    "answer": "Ulaanbaatar",
+                    "worth": 3
+                }
+            ]
+        },
+        {
+            "category": "History",
+            "questions": [
+                {
+                    "question":"During the Roman Triumvirate of 42 BCE, what region of the Roman Republic was given to Lepidus?",
+                    "options": [
+                        "Italia",
+                        "Gallia",
+                        "Asia",
+                        "Hispania"
+                        ],
+                    "answer": "Hispania",
+                    "worth": 3
+                },
+                {
+                    "question": "When did the United States formally declare war on Japan, entering World War II?",
+                    "options": [
+                        "June 6, 1944",
+                        "June 22, 1941",
+                        "September 1, 1939",
+                        "December 8, 1941"
+                        ],
+                    "answer": "December 8, 1941",
+                    "worth": 2
+                },
+                {
+                    "question": "What is the historical name of Sri Lanka?",
+                    "options":[
+                        "Myanmar",
+                        "Colombo",
+                        "Badulla",
+                        "Ceylon"
+                        ],
+                    "answer": "Ceylon",
+                    "worth": 2
+                },
+                {
+                    "question": "What year is on the flag of the US state Wisconsin?",
+                    "options": [
+                        "1634",
+                        "1783",
+                        "1901",
+                        "1848"
+                        ],
+                    "answer": "1848",
+                    "worth": 4
+                },
+                {
+                    "question": "What nationality was sultan Saladin?",
+                    "options":  [
+                        "Arab",
+                        "Egyptian",
+                        "Syrian",
+                        "Kurdish"
+                        ],
+                    "answer": "Kurdish",
+                    "worth": 2
+                }
+            ]
         }
     ]
 
