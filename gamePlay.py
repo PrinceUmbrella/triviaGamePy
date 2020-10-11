@@ -48,11 +48,14 @@ def gamePlay():
         question = questionList.pop(0)
         options = question.getOptions()
 
-        print(f"{currentPlayerName} Turn: Current Score {currentPlayerScore}")
+        print(f"{currentPlayerName}'s' Turn: Current Score {currentPlayerScore}")
 
         # question is displayed
         question.printQuestion()
         answer = input("Select your answer: ")
+        while(inputValidation(answer, len(options))):
+            answer = input(
+                "Incorrect Input!!! Please select your answer again: ")
 
         # When a player chooses their answer it either incorrect or correct
         if (options[int(answer)-1] == question.getAnswer()):
@@ -116,6 +119,10 @@ def getWinner(playerList):
         elif (player.getScore() == maxScore):
             winner.append(player.getName())
     return winner
+
+
+def inputValidation(userInput, size):
+    return userInput not in [f'{i + 1}' for i in range(size)]
 
 
 gamePlay()
