@@ -1,3 +1,9 @@
+"""
+Player object holds each player's information
+such as name and score 
+"""
+
+
 class Player:
     def __init__(self, name):
         self.name = name
