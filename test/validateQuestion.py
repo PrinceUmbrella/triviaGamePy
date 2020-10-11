@@ -5,6 +5,7 @@ schema = json.load(open("jsonSchema.json"))
 
 questions = json.load(open("..\questionsInput.json"))
 
+# compares the two schemas and throws an error if there is an odd thing in the question formatting
 try:
     validate(questions, schema)
     print("")

@@ -13,7 +13,8 @@ from prettytable import PrettyTable
 import json
 import random
 
-
+NUMBER_OF_QUESTION_PER_PLAYER = 5
+NUMBER_OF_PLAYERS = 2
 # Parse JSON into an object with attributes corresponding to dict keys.
 questionInput = json.load(open("questionsInput.json"),
                           object_hook=lambda d: SimpleNamespace(**d))
@@ -30,17 +31,19 @@ def gamePlay():
     # numberOfPlayers = int(input("Please Enter the number of players: "))
     numberOfPlayers = 2
     # player list an array of the player objects
-    playerList = getPlayersInfo(numberOfPlayers)
+
+    playerList = getPlayersInfo(NUMBER_OF_PLAYERS)
 
     print(PrettyTable(["Let's Start The Game"]))
     countt = 0
     totalQuestion = 0
+
     # The game stops when a total of 10 question have been asked
-    while (totalQuestion < 10):
+    while (totalQuestion < NUMBER_OF_PLAYERS * NUMBER_OF_QUESTION_PER_PLAYER):
         currentPlayerName = playerList[totalQuestion %
-                                       numberOfPlayers].getName()
+                                       NUMBER_OF_PLAYERS].getName()
         currentPlayerScore = playerList[totalQuestion %
-                                        numberOfPlayers].getScore()
+                                        NUMBER_OF_PLAYERS].getScore()
         question = questionList.pop(0)
         options = question.getOptions()
         print(f"{currentPlayerName} Turn: Current Score {currentPlayerScore}")
@@ -50,7 +53,7 @@ def gamePlay():
         # When a player chooses their answer it either incorrect or correct
         if (options[int(answer)-1] == question.getAnswer()):
             playerList[totalQuestion %
-                       numberOfPlayers].setScore(question.getPoints())
+                       NUMBER_OF_PLAYERS].setScore(question.getPoints())
             print(PrettyTable(
                 [f"Correct Answer! Your current score is {currentPlayerScore + question.getPoints()}"]))
         else:
