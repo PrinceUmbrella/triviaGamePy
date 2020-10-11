@@ -16,3 +16,7 @@ then go to the `gamePlay.py` and start the game
 NUMBER_OF_QUESTION_PER_PLAYER = 5
 NUMBER_OF_PLAYERS = 2
 ```
+## Game Play Images
+![Start](https://github.com/PrinceUmbrella/triviaGamePy/blob/main/assets/start.png)
+
+![End](https://github.com/PrinceUmbrella/triviaGamePy/blob/main/assets/endpng.png)
