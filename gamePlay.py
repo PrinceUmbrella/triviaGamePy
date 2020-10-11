@@ -2,7 +2,7 @@
 Leoul Tilahun
 Jesus Arredondo
 DeAnda Little
-Royce Payne 
+Royce Payne
 Trivia Game
 """
 
@@ -48,7 +48,9 @@ def gamePlay():
 
         print(f"{currentPlayerName} Turn: Current Score {currentPlayerScore}")
 
-        #question is displayed
+
+` print("\n")
+        # question is displayed
         question.printQuestion()
         answer = input("Select your answer: ")
 
