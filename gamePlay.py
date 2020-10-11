@@ -45,28 +45,35 @@ def gamePlay():
                                         NUMBER_OF_PLAYERS].getScore()
         question = questionList.pop(0)
         options = question.getOptions()
+
         print(f"{currentPlayerName} Turn: Current Score {currentPlayerScore}")
+
         #question is displayed
         question.printQuestion()
         answer = input("Select your answer: ")
+
         # When a player chooses their answer it either incorrect or correct
         if (options[int(answer)-1] == question.getAnswer()):
             playerList[totalQuestion %
                        NUMBER_OF_PLAYERS].setScore(question.getPoints())
             print(PrettyTable(
                 [f"Correct Answer! Your current score is {currentPlayerScore + question.getPoints()}"]))
+
         else:
             incorrectTable = PrettyTable(
                 [f"Incorrect Answer! The answer is {question.getAnswer()}"])
             incorrectTable.add_row(
                 [f"Your current score is still {currentPlayerScore}"])
             print(incorrectTable)
+
         print("\n")
         totalQuestion += 1
+
     # When the game ends the score board is displayed
     finalScoreTable = PrettyTable(["Name", "Score"])
     for i in playerList:
         finalScoreTable.add_row([i.getName(), i.getScore()])
+
     print("\n")
     print(finalScoreTable)
 
