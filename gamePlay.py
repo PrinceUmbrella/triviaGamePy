@@ -33,8 +33,9 @@ def gamePlay():
 
     playerList = getPlayersInfo(NUMBER_OF_PLAYERS)
 
-    print(PrettyTable(["Let's Start The Game"]))
     print("\n")
+    print(PrettyTable(["Let's Start The Game"]))
+
     countt = 0
     totalQuestion = 0
 
