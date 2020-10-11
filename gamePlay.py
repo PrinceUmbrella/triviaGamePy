@@ -47,9 +47,8 @@ def gamePlay():
         options = question.getOptions()
 
         print(f"{currentPlayerName} Turn: Current Score {currentPlayerScore}")
+        print("\n")
 
-
-` print("\n")
         # question is displayed
         question.printQuestion()
         answer = input("Select your answer: ")
