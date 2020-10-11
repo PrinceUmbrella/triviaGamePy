@@ -23,4 +23,4 @@ class Player:
         self.name = self.name.lower()
         firstAndLastNames = self.name.split(" ")
         self.name = " ".join([i[0].upper() + i[1:]
-                              for i in firstAndLastNames])
+                              for i in firstAndLastNames if i != ''])

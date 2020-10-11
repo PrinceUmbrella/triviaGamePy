@@ -34,6 +34,7 @@ def gamePlay():
     playerList = getPlayersInfo(NUMBER_OF_PLAYERS)
 
     print(PrettyTable(["Let's Start The Game"]))
+    print("\n")
     countt = 0
     totalQuestion = 0
 
@@ -47,7 +48,6 @@ def gamePlay():
         options = question.getOptions()
 
         print(f"{currentPlayerName} Turn: Current Score {currentPlayerScore}")
-        print("\n")
 
         # question is displayed
         question.printQuestion()
