@@ -29,7 +29,6 @@ def gamePlay():
         questionList += unpackQuestion(category)
     random.shuffle(questionList)
     # numberOfPlayers = int(input("Please Enter the number of players: "))
-    numberOfPlayers = 2
     # player list an array of the player objects
 
     playerList = getPlayersInfo(NUMBER_OF_PLAYERS)
