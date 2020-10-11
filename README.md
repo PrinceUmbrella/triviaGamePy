@@ -1,4 +1,4 @@
-# triviaGamePy
+# Trivia Game in Python
 
 After downloading the code run these two commands in the terminal
 
