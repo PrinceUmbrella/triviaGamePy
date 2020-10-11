@@ -69,6 +69,7 @@ def gamePlay():
         finalScoreTable.add_row([i.getName(), i.getScore()])
     print("\n")
     print(finalScoreTable)
+    print(f"The winner(s) : {', '.join(getWinner(playerList))}")
 
 # function that gets the name and sets them to an array of players
 
@@ -93,6 +94,19 @@ def unpackQuestion(categoryPack):
     for ques in categoryPack.questions:
         questionList.append(Question(ques, categoryPack.category))
     return questionList
+# function that determines who's the winner
+
+
+def getWinner(playerList):
+    maxScore = 0
+    winner = []
+    for player in playerList:
+        if (player.getScore() > maxScore):
+            maxScore = player.getScore()
+            winner = [player.getName()]
+        elif (player.getScore() == maxScore):
+            winner.append(player.getName())
+    return winner
 
 
 gamePlay()
